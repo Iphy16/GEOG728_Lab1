@@ -1,0 +1,96 @@
+---
+title: "Lab#1"
+author: "Ifeoma Okonye"
+date: "2024-01-25"
+output: html_document
+---
+
+# Introduction 
+
+This Markdown file will give a step by step breakdown of how I completed the Lab 1 practical assignment.
+
+Here, I will:
+* Create Data Objects,
+* Create Dataframes, and
+* Check and Remove stored objects.
+
+## Creating Data Objects.
+
+I created a _named numerical variable_ and created a *vector of even numbers*. Then I reported the produced data objects and applied functions to each object in two different code chunks.
+
+### Code Chunk 1: Creating Variables.
+
+```{r}
+# Creating a named numerical variable
+Num <- -28.52
+Num
+
+# creating a new vector of numbers 
+EvenNum <- c(2,12,10,8,16,4,28,14,18,26,6,22,20,24)
+EvenNum
+
+```
+
+
+### Code Chunk 2: Applying Functions.
+
+``` {r}
+# Functions on named numerical variable
+abs(Num)
+round(Num)
+
+# Functions on vector of numbers
+median(EvenNum)
+max(EvenNum)
+sum(EvenNum)
+sort(EvenNum)
+SEN <- sort(EvenNum)
+SEN
+```
+
+
+## Creating Dataframes.
+
+In a chunk of code, I created a dataframe showing the count of car brands in a dealership ***(not real data)***.
+
+### Code Chunk 3: Creating Dataframes.
+
+```{r}
+SN <- 1:10
+cars <- c('Toyota', 'Chevrolets', 'Mazda', 'Mercedes-Benz', 'Hyundai', 'Lexus', 'Jeep', 'Kia', 'Dodge', 'Bentley')
+count <- c(10, 5, 20, 7, 3, 15, 8, 6, 4, 1)
+ds <- data.frame(SN, cars, count)
+ds
+head(ds, 3)
+dim(ds)
+```
+
+Next, I loaded the airquality dataset from the list of freely provided datasets in R.The dataset shows the New York Air Quality Measurements.
+
+### Code Chunk 4: Loading Datasets.
+
+```{r}
+data(airquality)
+df <- airquality
+df
+head(df, 5)
+nrow(df)
+ncol(df)
+dim(df)
+summary(df)
+```
+
+
+## Checking and Removing stored objects.
+
+
+
+### Code Chunk 5: Check where objects are stored.
+
+```{r}
+ls()
+rm(list = ls())
+ls()
+```
+
+
